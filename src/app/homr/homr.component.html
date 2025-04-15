@@ -1,0 +1,25 @@
+<div class="home-container">
+  <div class="card">
+    <h1>Bienvenue au Quiz !</h1>
+    <form>
+      <mat-form-field appearance="outline">
+        <mat-label>Catégorie</mat-label>
+        <mat-select [(ngModel)]="category" name="category">
+          <mat-option value="9">Culture Générale</mat-option>
+          <mat-option value="21">Sports</mat-option>
+          <mat-option value="23">Histoire</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="difficulty">
+        <mat-radio-group [(ngModel)]="difficulty" name="difficulty">
+          <mat-radio-button value="easy">Facile</mat-radio-button>
+          <mat-radio-button value="medium">Moyen</mat-radio-button>
+          <mat-radio-button value="hard">Difficile</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <button mat-raised-button color="primary" (click)="startQuiz()">Démarrer</button>
+    </form>
+  </div>
+</div>
